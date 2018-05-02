@@ -23,7 +23,7 @@ Log file by default placed in /var/log/cron/cron.log
 docker run --name="alpine-cron-sample" -d \
 -v /path/to/app/conf/crontabs:/etc/cron.d \
 -v /path/to/app/scripts:/scripts \
-xordiv/docker-alpine-cron
+mtkvnela/docker-alpine-cron
 ```
 
 #### With scripts and CRON_STRINGS
@@ -31,12 +31,12 @@ xordiv/docker-alpine-cron
 docker run --name="alpine-cron-sample" -d \
 -e 'CRON_STRINGS=* * * * * root /scripts/myapp-script.sh'
 -v /path/to/app/scripts:/scripts \
-xordiv/docker-alpine-cron
+mtkvnela/docker-alpine-cron
 ```
 
 #### Get URL by cron every minute
 ```
 docker run --name="alpine-cron-sample" -d \
 -e 'CRON_STRINGS=* * * * * root wget https://sample.dockerhost/cron-jobs'
-xordiv/docker-alpine-cron
+mtkvnela/docker-alpine-cron
 ```
